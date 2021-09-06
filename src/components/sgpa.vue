@@ -1,30 +1,6 @@
 <template>
   <div class="container">
-    <h1
-      class="heading is-size-3 has-text-centered is-underlined has-text-weight-bold is-family-monospace"
-    >
-      SGPA-CGPA CALCULATOR
-    </h1>
-    <div class="box mt-6 tabs is-toggle is-toggle-rounded is-centered">
-      <ul>
-        <li @click="show = false" :class="{ 'is-active': !show }">
-          <a>
-            <span class="icon is-small"
-              ><i class="fas fa-graduation-cap"></i
-            ></span>
-            <span>SGPA</span>
-          </a>
-        </li>
-        <li @click="show = true" :class="{ 'is-active': show }">
-          <a>
-            <span class="icon is-small"
-              ><i class="fas fa-graduation-cap"></i
-            ></span>
-            <span>CGPA</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+    
     <div class="scroll">
       <table class="center table is-hoverable is-striped">
         <tr>
@@ -132,7 +108,7 @@
 export default {
   data() {
     return {
-      show: false,
+     
       result: null,
       totalCreds: null,
       subjects: [
@@ -192,7 +168,7 @@ export default {
           this.result = NaN;
         }
       });
-      this.result = parseFloat(this.result / this.totalCreds).toFixed(3);
+      this.result = parseFloat(this.result / this.totalCreds).toFixed(2);
     },
   },
 };
